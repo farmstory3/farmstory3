@@ -24,8 +24,9 @@ public class FrontController extends HttpServlet{
 		System.out.println("front Controller 입장");
 		
 		String method = req.getMethod();
-		String path = req.getPathInfo();
-		
+		String uri = req.getRequestURI();
+        String path = uri.substring(uri.lastIndexOf("/"));
+
 		Controller controller = handlerMapping.getController(path);
 		
 		if (controller == null) {
