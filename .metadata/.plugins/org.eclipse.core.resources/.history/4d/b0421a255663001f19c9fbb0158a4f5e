@@ -1,0 +1,5 @@
+package dto.responsedto;
+
+public class ResponseDto {
+
+}
