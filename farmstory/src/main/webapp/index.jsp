@@ -41,6 +41,7 @@
         <div class="menu-5"></div>
     </div>
     <div class="header-menu-box">
+    	<a href="/farmstory/test/admin.do" >어드민 관리자 페이지 테스트</a>
         <div>
             <div class="menu-gubun"></div>
             <a href="../introduction/introduction.html">
