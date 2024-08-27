@@ -24,6 +24,13 @@ public class SQL {
 											+ "`regip` = ?, "
 											+ "`regDate` = NOW()";
 	
-	public static final String SELECT_USERS = "select * from member";
+	public static final String SELECT_USERS = "select * from member order by regDate limit 3";
+	public static final String SELECT_PRODUCTS = "select * from product order by regDate limit 3";
+	public static final String SELECT_ORDERS = "SELECT O.order_idx, P.prod_name, O.price, O.quantity, P.deliveryFee, O.total_price, O.uid, O.order_rdate "
+											 + "FROM `order` AS O "
+											 + "JOIN `product` AS P "
+											 + "ON O.prod_idx = P.prod_idx order by O.order_rdate limit 3";
+	
+	public static final String SELECT_PROD_LIST = "SELECT PF.`path`, PF.filename, P.prod_idx, P.prod_name, P.`type`, P.price, P.stock, P.regDate FROM product AS P JOIN product_file AS PF ON P.prod_idx = PF.prod_idx";
 	
 }

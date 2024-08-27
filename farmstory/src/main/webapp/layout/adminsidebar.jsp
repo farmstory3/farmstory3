@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/farmstory/css/adminsidebar.css">
 </head>
+<%
+    String currentPage = request.getServletPath();
+	int lastSlashIndex = currentPage.lastIndexOf("/");
+	int lastDotIndex = currentPage.lastIndexOf(".");
+	String fileName = currentPage.substring(lastSlashIndex + 1, lastDotIndex);
+%>
 <body>
 	<div id="section1">
           <div id="section1_head">
@@ -16,12 +22,12 @@
             <ul id="prod_manage">
               상품관리
               <div>
-                <li id="prod_list">L 
-                  <a href="./product/list.html">상품목록</a>
-                </li>
-                <li id="prod_register">L 
-                  <a href="./product/register.html">상품등록</a>
-                </li>
+                <li id="prod_list" <%= "adminproduct".equals(fileName) ? "class='active'" : "" %> >L 
+		            <a href="/farmstory/admin/product.do">상품목록</a>
+		        </li>
+		        <li id="prod_register" <%= "adminprodRegist".equals(fileName) ? "class='active'" : "" %> >L 
+		            <a href="./product/register.html">상품등록</a>
+		        </li>
               </div>
             </ul>
             <ul id="order_manage">
