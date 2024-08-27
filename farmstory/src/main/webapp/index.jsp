@@ -25,6 +25,8 @@
                     <div>|</div>
                     <div><a href="/farmstory/member/register.do">회원가입</a></div>
                     <div>|</div>
+                    <div><a href="/farmstory/test/admin.do">관리자</a></div>
+                    <div>|</div>
                     <div><a href="/farmstory/community/qna.html">고객센터</a></div>
                 </div>
             </div>
@@ -41,7 +43,6 @@
         <div class="menu-5"></div>
     </div>
     <div class="header-menu-box">
-    	<a href="/farmstory/test/admin.do" >어드민 관리자 페이지 테스트</a>
         <div>
             <div class="menu-gubun"></div>
             <a href="../introduction/introduction.html">
