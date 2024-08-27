@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Main</title>
+<title>Administrator::Main</title>
 <link rel="stylesheet" href="/farmstory/css/adminmain.css">
 </head>
 <body>
@@ -133,7 +133,6 @@
           </div>
         </div>
 	</main>
-	
 	<jsp:include page="/layout/adminfooter.jsp" />
 </body>
 </html>
