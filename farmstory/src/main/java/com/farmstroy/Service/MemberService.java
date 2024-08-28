@@ -74,7 +74,7 @@ public enum MemberService{
 		return dao.selectUser(uid, pass);
 	};
 	public List<MemberDTO> selectUsers() {
-		return null;
+		return dao.selectUsers();
 	};
 	public void updateUser(MemberDAO dto) {
 		

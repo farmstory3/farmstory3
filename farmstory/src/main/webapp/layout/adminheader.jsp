@@ -13,7 +13,7 @@
 <body>
 	<div class="header_wrapper">
       <header>
-        <a href="#" id="logo">
+        <a href="/farmstory/admin/main.do" id="logo">
           <img src="/farmstory/images/admin_logo.jpg" alt="admin_logo"/>
         </a>
         <div class="home">

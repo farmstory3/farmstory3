@@ -8,6 +8,30 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/farmstory/css/adminproduct.css">
 </head>
+<%
+		Integer resultObj = (Integer) request.getAttribute("r");
+		int result = (resultObj != null) ? resultObj : -1;
+		if(result == 1) {
+%>
+        <script>
+            alert('삭제 성공');
+            window.location.href = '/farmstory/admin/product.do'; // 삭제 후 다른 페이지로 이동하고 싶다면 사용
+        </script>
+<%
+    } else if(result == 2) {
+%>
+        <script>
+            alert('삭제상품에 처리되지 않은 주문이 있습니다.');
+        </script>
+<%
+    } else if(result == 0 ) {
+%>	
+	<script>
+		alert('해당 상품이 존재하지 않습니다.')
+	</script>
+<%
+    }
+%>
 <body>
 	
 	<jsp:include page="/layout/adminheader.jsp" />
@@ -32,7 +56,8 @@
                 <c:forEach var="productList" items="${productLists }">
                 <tr>
                 	<td><input name="selectedProducts" type="checkbox" value="${productList.prod_idx}"></td>
-                	<td><img id="sample_img" src=${productList.path}${productList.url} alt="sample"></td>
+                	<td><img id="sample_img" src=${productList.path}${productList.url} alt="sample">
+                	</td>
                 	<td>${productList.prod_idx }</td>
                 	<td>${productList.prod_name }</td>
                 	<td>${productList.type }</td>
@@ -45,7 +70,7 @@
             </div>
             <div id="prod_heading">
               <a href="#" onclick="submitSelectedProducts(event)" id="prod_del">선택삭제</a>
-              <a href="#" id="prod_reg">상품등록</a>
+              <a href="/farmstory/admin/prodcreateview.do" id="prod_reg">상품등록</a>
             </div>
             <div id="list_num">
               <a><</a>

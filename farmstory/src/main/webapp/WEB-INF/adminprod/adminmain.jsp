@@ -31,12 +31,12 @@
                 </tr>
                 <c:forEach var="product" items="${products}">
                	<tr>
-               		<th>${product.prod_idx }</th>
-               		<th>${product.prod_name }</th>
-               		<th>${product.type }</th>
-               		<th>${product.price }</th>
-               		<th>${product.stock }</th>
-               		<th>${product.regDate }</th>
+               		<td>${product.prod_idx }</td>
+               		<td>${product.prod_name }</td>
+               		<td>${product.type }</td>
+               		<td>${product.price }</td>
+               		<td>${product.stock }</td>
+               		<td>${product.regDate }</td>
                		
                	</tr>
                 </c:forEach>
@@ -61,14 +61,14 @@
                 </tr>
                 <c:forEach var="order" items="${orders}">
                 <tr>
-                	<th>${order.order_idx }</th>
-                	<th>${order.prod_name }</th>
-                	<th>${order.price }</th>
-                	<th>${order.quantity }</th>
-                	<th>${order.deliveryFee }</th>
-                	<th>${order.total_price }</th>
-                	<th>${order.uid }</th>
-                	<th>${order.order_rdate }</th>
+                	<td>${order.order_idx }</td>
+                	<td>${order.prod_name }</td>
+                	<td>${order.price }</td>
+                	<td>${order.quantity }</td>
+                	<td>${order.deliveryFee }</td>
+                	<td>${order.total_price }</td>
+                	<td>${order.uid }</td>
+                	<td>${order.order_rdate }</td>
                 </tr>
                 </c:forEach>
               </table>

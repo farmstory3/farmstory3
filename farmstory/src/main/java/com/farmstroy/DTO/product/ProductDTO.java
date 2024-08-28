@@ -1,6 +1,7 @@
 package com.farmstroy.DTO.product;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,5 +23,7 @@ public class ProductDTO {
 	private String regDate;
 	private int stock;
 	private String etc;
+	private int discount;
+	private List<ProductFileDTO> prod_file;
 	
 }
