@@ -66,6 +66,7 @@ public class ListController extends HttpServlet{
 		req.setAttribute("pageLastNum", pageLastNum);
 		req.setAttribute("pageStartNum", pageStartNum);
 		req.setAttribute("pageGroup", pageGroup);
+		req.setAttribute("group",group);
 		
 		logger.debug("articles : "+ articles);
 		logger.debug("currentPageNum : "+ currentPageNum);

@@ -12,78 +12,7 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/footer.css">
 <body>
-	<div class="header-wrapper">
-		<div class="header-logo-box">
-			<div class="header-logo"  onclick="location.href='/farmstory'">
-				<div class="logo-link-box">
-					<div class="logo-link">
-						<div>
-							<a href="/farmstory">Home</a>
-						</div>
-						<div>|</div>
-						<div>
-							<a href="/farmstory/login.do">로그인</a>
-						</div>
-						<div>|</div>
-						<div>
-							<a href="/farmstory/register.do">회원가입</a>
-						</div>
-						<div>|</div>
-						<div>
-							<a href="/farmstory/community/qna.html">고객센터</a>
-						</div>
-					</div>
-				</div>
-				<div class="logo-add-box"></div>
-			</div>
-		</div>
-		<div class="header-gubun-box">
-			<div class="menu-1"></div>
-			<div class="menu-2"></div>
-			<div class="menu-3"></div>
-			<div class="menu-4"></div>
-			<div class="menu-5"></div>
-		</div>
-		<div class="header-menu-box">
-			<div>
-				<div class="menu-gubun"></div>
-				<a href="/farmstory/introduction/hello.do">
-					<div class="menu-1 menu"></div>
-				</a>
-			</div>
-			<div>
-				<div class="menu-gubun"></div>
-				<a href="../market/list.html">
-					<div class="menu-2 menu">
-						<img src="../images/head_menu_badge.png" alt="badge">
-					</div>
-				</a>
-			</div>
-			<div>
-				<div class="menu-gubun"></div>
-				<a href="/farmstory/article/list.do?group=croptalk&cate=story">
-					<div class="menu-3 menu"></div>
-				</a>
-			</div>
-			<div>
-				<div class="menu-gubun"></div>
-				<a href="/farmstory/article/list.do?group=event&cate=info">
-					<div class="menu-4 menu"></div>
-				</a>
-			</div>
-			<div>
-				<div class="menu-gubun"></div>
-				<a href="/farmstory/article/list.do?group=community&cate=notice">
-					<div class="menu-5 menu"></div>
-				</a>
-			</div>
-		</div>
-		<div class="header-bottom-img">
-			<div class="header-bottom-comm">
-				<img src="../images/sub_top_tit4.png" alt="info">
-			</div>
-		</div>
-	</div>
+<jsp:include page="/layout/_header.jsp" />
 	<div class="main-wrapper">
 		<div class="sidebar-box">
 			<div class="sidebar-logo-box">
@@ -161,23 +90,6 @@
 		</div>
 
 	</div>
-	<div class="footer-wrapper">
-		<div class="footer-gubun-box"></div>
-		<div class="footer-main-box">
-			<div class="footer-logo-box"></div>
-			<div class="footer-info-box">
-				<div class="footer-info-detail">
-					<div>(주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제
-						2013-팜스토리구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호</div>
-					<div>등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동</div>
-					<div>대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 /
-						경기도 성남시 잘한다구 신난다동 345</div>
-					<div class="footer-info-copywriter">Copyright(C)홍길동 All
-						rights reserved.</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+<jsp:include page="/layout/_footer.jsp" />	
 </body>
 </html>

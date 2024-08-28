@@ -31,16 +31,17 @@ public class ProductDAO extends DBHelper{
 			
 			while(rs.next()) {
 				ProductDTO product = new ProductDTO();
-				product.setProd_idx(rs.getInt(1));
-				product.setProd_name(rs.getString(2));
-				product.setNickname(rs.getString(3));
-				product.setType(rs.getString(4));
-				product.setPrice(rs.getBigDecimal(5));
-				product.setPoint(rs.getBigDecimal(6));
-				product.setDeliveryFee(rs.getBigDecimal(7));
-				product.setStock(rs.getInt(8));
-				product.setEtc(rs.getString(9));
-				product.setRegDate(rs.getString(10));
+				product.setProd_idx(rs.getInt("prod_idx"));
+				product.setProd_name(rs.getString("prod_name"));
+				product.setNickname(rs.getString("nick"));
+				product.setType(rs.getString("type"));
+				product.setPrice(rs.getBigDecimal("price"));
+				product.setPoint(rs.getBigDecimal("point"));
+				product.setDeliveryFee(rs.getBigDecimal("deliveryFee"));
+				product.setDiscount(rs.getBigDecimal("discount"));
+				product.setStock(rs.getInt("discount"));
+				product.setEtc(rs.getString("etc"));
+				product.setRegDate(rs.getString("regdate"));
 				products.add(product);
 			}
 		} catch (Exception e) {
@@ -49,7 +50,7 @@ public class ProductDAO extends DBHelper{
 		closeAll();
 		return products;
 	}
-
+	
 	public List<ProductListDTO> selectProductList() {
 		List<ProductListDTO> productLists = new ArrayList<ProductListDTO>();
 		
@@ -76,6 +77,37 @@ public class ProductDAO extends DBHelper{
 		closeAll();
 		return productLists;
 	}
+	// jh
+	public List<ProductListDTO> selectMarketProductList() {
+		List<ProductListDTO> productLists = new ArrayList<ProductListDTO>();
+		
+		try {
+			conn = getConnection();
+			psmt = conn.prepareStatement(SQL.SELECT_MARKETPRODUCTS);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				ProductListDTO productList = new ProductListDTO();
+				productList.setPath(rs.getString(1));
+				productList.setUrl(rs.getString(2));
+				productList.setProd_idx(rs.getInt(3));
+				productList.setProd_name(rs.getString(4));
+				productList.setType(rs.getString(5));
+				productList.setPrice(rs.getBigDecimal(6));
+				productList.setStock(rs.getInt(7));
+				productList.setRegDate(rs.getString(8));
+				productList.setPoint(rs.getBigDecimal(9));
+				productList.setDiscount(rs.getInt(10));
+				productLists.add(productList);
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		closeAll();
+		return productLists;
+	}
+	
+	
 
 	public void deleteProduct(List<String> productIdx) {
 		if (productIdx == null || productIdx.isEmpty()) {

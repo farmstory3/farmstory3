@@ -16,4 +16,6 @@ public class ProductListDTO {
 	private BigDecimal price;
 	private int stock;
 	private String regDate;
+	private int discount;
+	private BigDecimal point;
 }
