@@ -27,10 +27,12 @@ public class AdminProductDeleteController extends HttpServlet {
         } else {
             System.out.println("No products were selected.");
         }
-		productService.deleteProduct(productIdx);
+		int r = productService.deleteProduct(productIdx);
+		
 		
 		List<ProductListDTO> productLists = productService.selectProductList();
 		req.setAttribute("productLists", productLists);
+		req.setAttribute("r", r);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/adminprod/adminproduct.jsp");
 		dispatcher.forward(req, resp);
 	}

@@ -20,8 +20,12 @@ public enum ProductService {
 		return dao.selectProductList();
 	}
 
-	public void deleteProduct(List<String> productIdx) {
-		dao.deleteProduct(productIdx);
+	public int deleteProduct(List<String> productIdx) {
+		return dao.deleteProduct(productIdx);
+	}
+
+	public int insertProduct(ProductDTO product) {
+		return dao.insertProduct(product);
 	}
 	
 }

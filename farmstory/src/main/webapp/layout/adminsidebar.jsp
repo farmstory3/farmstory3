@@ -12,6 +12,7 @@
 	int lastSlashIndex = currentPage.lastIndexOf("/");
 	int lastDotIndex = currentPage.lastIndexOf(".");
 	String fileName = currentPage.substring(lastSlashIndex + 1, lastDotIndex);
+	System.out.print(fileName);
 %>
 <body>
 	<div id="section1">
@@ -25,15 +26,15 @@
                 <li id="prod_list" <%= "adminproduct".equals(fileName) ? "class='active'" : "" %> >L 
 		            <a href="/farmstory/admin/product.do">상품목록</a>
 		        </li>
-		        <li id="prod_register" <%= "adminprodRegist".equals(fileName) ? "class='active'" : "" %> >L 
-		            <a href="./product/register.html">상품등록</a>
+		        <li id="prod_register" <%= "adminprodcreate".equals(fileName) ? "class='active'" : "" %> >L 
+		            <a href="/farmstory/admin/prodcreateview.do">상품등록</a>
 		        </li>
               </div>
             </ul>
             <ul id="order_manage">
               주문관리
-              <li id="order_list">L 
-                <a href="./order/list.html">주문목록</a>
+              <li id="order_list" <%= "adminorder".equals(fileName) ? "class='active'" : "" %> >L 
+                <a href="/farmstory/admin/order.do">주문목록</a>
               </li>
             </ul>
             <ul id="user_manage">

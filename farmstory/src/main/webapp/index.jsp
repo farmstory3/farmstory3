@@ -23,6 +23,8 @@
                     <div>|</div>
                     <div><a href="/farmstory/member/login.do">로그인</a></div>
                     <div>|</div>
+                    <div><a href="/farmstory/admin/main.do">관리자</a></div>
+                    <div>|</div>
                     <div><a href="/farmstory/member/register.do">회원가입</a></div>
                     <div>|</div>
                     <div><a href="/farmstory/community/qna.html">고객센터</a></div>

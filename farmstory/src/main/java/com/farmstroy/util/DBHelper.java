@@ -15,8 +15,10 @@ public class DBHelper {
 
 	protected Connection conn = null;
 	protected PreparedStatement psmt = null;
+	protected PreparedStatement psmt2 = null;
 	protected Statement stmt = null;
 	protected ResultSet rs = null;
+	protected ResultSet rs2 = null;
 
 	protected Connection getConnection() throws NamingException, SQLException {
 		//1단계 - JNDI 서비스 객체 생성
@@ -34,6 +36,13 @@ public class DBHelper {
 		if(rs != null) {
 			try {
 				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if(rs2 != null) {
+			try {
+				rs2.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -56,6 +65,13 @@ public class DBHelper {
 			try {
 				conn.close();
 			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if(psmt2 != null) {
+			try {
+				psmt2.close();
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
