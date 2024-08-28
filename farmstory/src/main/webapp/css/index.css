@@ -3,10 +3,10 @@
     padding: 0;
 }
 
-
-.header-wrapper {
+/* 수정 */
+.header-wrapper {       
     width: 980px;
-    height: 130px;
+    height: 370px; /* 수정 */
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -36,8 +36,8 @@
 .logo-link-box {
     position: relative;
     top: -17%;
-    right: -181%;
-    width: 240px;
+    right: -194%;
+    width: 192.75px;
 }
 
 .logo-link {
@@ -55,7 +55,7 @@
     height: 15px;
     position: relative;
     top: 53%;
-    right: -185%;
+    right: -175%;
 }
 
 .header-menu-box{
@@ -77,17 +77,6 @@
 
 .menu-2{
     background-image: url(../images/head_menu2.png);
-}
-
-.menu-2 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.menu-2 img {
-    margin-left: 58px;
-    margin-top: -16px;
 }
 
 .menu-3{
@@ -143,6 +132,15 @@
 
 }
 
+/* 수정 (새로생김) */
+.main-container {
+    width: 980px;
+    height: 710px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
 .index-main-box1 {
     display: flex;
     flex-direction: row;
@@ -150,7 +148,6 @@
     box-sizing: border-box;
     justify-content: left;
     align-items: center;
-    margin-left: 463px;
 }
 
 .index-sub {
@@ -158,6 +155,7 @@
     flex-wrap: wrap; /* 아이템이 줄을 넘어가면 다음 줄로 이동 */
     gap: 11px;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .index-product-box1,
@@ -170,14 +168,399 @@
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    text-align: center;
+    display: flex;
+        flex-direction: column;
+        align-items: center; /* 수평 가운데 정렬 */
+        width: 150px; /* 필요에 따라 조정하세요 */
+        text-align: center; /* 텍스트 가운데 정렬 */
 }
+
+.price-row {
+    display: flex;
+    justify-content: center;
+    gap: 3px; /* 가격과 할인율 사이의 간격 */
+    margin: 3px 0;
+}
+
+
+.index-product-box1 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.index-product-box2 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.index-product-box3 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.index-product-box4 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.index-product-box5 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.index-product-box6 span {
+    display: block;
+    margin: 1px 0; /* 각 줄 사이에 여백 추가 */
+}
+
+.text001 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text002 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text003 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text004 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text005 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
+.text006 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text007 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text008 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text009 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text010 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
+.text011 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text012 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text013 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text014 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text015 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
+.text016 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text017 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text018 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text019 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text020 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
+.text021 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text022 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text023 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text024 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text025 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
+.text026 {
+    color: rgba(119, 119, 119, 1);
+    width: auto;
+    height: auto;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text027 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: 550;
+}
+
+.text028 {
+    color: black;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: line-through;
+}
+
+.text029 {
+    color: red;
+    width: 30px;
+    height: auto;
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.text030 {
+    color: black;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-family: Inter;
+    line-height: normal;
+    font-stretch: normal;
+    font-weight: bold;
+}
+
 
 .index_main_box2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 1%;
+    padding: 10px 0px 20px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -187,9 +570,12 @@
     background-image: url(../images/main_banner_sub1_bg.jpg);
     width: 490px;
     height: 74px;
+    display: flex;
+    align-items: center; /* 이미지 수직 가운데 정렬 */
 }
 
-.main_banner_box1 > img {
+.main_banner_box1 img
+.main_banner_box2 img {
   top: 50%;
   left: 50%;
 }
@@ -198,16 +584,18 @@
     background-image: url(../images/main_banner_sub2_bg.jpg);
     width: 490px;
     height: 74px;
+    display: flex;
+    align-items: center; /* 이미지 수직 가운데 정렬 */
 }
 
 .index_main_box3 {
     display: flex;
     flex-direction: row;
     width: 100%;
+    padding: 1%;
     box-sizing: border-box;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    margin-left: 463px;
 }
 
 .extra_box1,
@@ -222,9 +610,8 @@
     flex-direction: row;
     width: 100%;
     box-sizing: border-box;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    margin-left: 463px;
     margin-top: 10px;
 }
 
@@ -254,6 +641,12 @@
     font-size: 10px;
     text-align: right;
     margin-right: 10px;
+    text-align: right
+}
+
+.sub_date a {
+    display: block;
+    margin: 1px 0;
 }
 
 .cs_wrapper {
