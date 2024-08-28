@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,30 +28,18 @@
                   <th>재고</th>
                   <th>등록일</th>
                 </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>과일</td>
-                  <td>4,000원</td>
-                  <td>100</td>
-                  <td>2023-01-01</td>
-                </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>과일</td>
-                  <td>4,000원</td>
-                  <td>100</td>
-                  <td>2023-01-01</td>
-                </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>과일</td>
-                  <td>4,000원</td>
-                  <td>100</td>
-                  <td>2023-01-01</td>
-                </tr>
+                <c:forEach var="product" items="${products}">
+               	<tr>
+               		<th>${product.prod_idx }</th>
+               		<th>${product.prod_name }</th>
+               		<th>${product.type }</th>
+               		<th>${product.price }</th>
+               		<th>${product.stock }</th>
+               		<th>${product.regDate }</th>
+               		
+               	</tr>
+                </c:forEach>
+                
               </table>
             </div>
             <div id="article2">
@@ -70,36 +58,18 @@
                   <th>주문자</th>
                   <th>주문일</th>
                 </tr>
+                <c:forEach var="order" items="${orders}">
                 <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>4,000원</td>
-                  <td>2개</td>
-                  <td>3,000원</td>
-                  <td>8,000원</td>
-                  <td>홍길동</td>
-                  <td>2023-01-01</td>
+                	<th>${order.order_idx }</th>
+                	<th>${order.prod_name }</th>
+                	<th>${order.price }</th>
+                	<th>${order.quantity }</th>
+                	<th>${order.deliveryFee }</th>
+                	<th>${order.total_price }</th>
+                	<th>${order.uid }</th>
+                	<th>${order.order_rdate }</th>
                 </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>4,000원</td>
-                  <td>2개</td>
-                  <td>3,000원</td>
-                  <td>8,000원</td>
-                  <td>홍길동</td>
-                  <td>2023-01-01</td>
-                </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>사과 500g</td>
-                  <td>4,000원</td>
-                  <td>2개</td>
-                  <td>3,000원</td>
-                  <td>8,000원</td>
-                  <td>홍길동</td>
-                  <td>2023-01-01</td>
-                </tr>
+                </c:forEach>
               </table>
             </div>
             <div id="article3">
