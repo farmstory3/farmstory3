@@ -141,7 +141,8 @@ td {
   margin-top: 10px;
 }
 
-#list_num > a:nth-child(2) {
-  font-weight: bold;
-  text-decoration: underline;
+.active {
+	text-decoration: underline;
 }
+
+

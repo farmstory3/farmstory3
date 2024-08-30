@@ -125,6 +125,40 @@ public class MemberDAO extends DBHelper{
 		}
 		return user;
 	};
+	
+	public MemberDTO selectMemberDetail(String uid) {
+		MemberDTO user = null;
+		try {
+			conn = getConnection();
+			psmt= conn.prepareStatement(SQL.SELELT_MEMBER_DETAIL);
+			psmt.setString(1, uid);
+			
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				user = new MemberDTO();
+				user.setUid(rs.getString(1));
+				user.setPass(rs.getString(2));
+				user.setName(rs.getString(3));
+				user.setNick(rs.getString(4));
+				user.setEmail(rs.getString(5));
+				user.setHp(rs.getString(6));
+				user.setRole(rs.getString(7));
+				user.setZip(rs.getString(8));
+				user.setAddr1(rs.getString(9));
+				user.setAddr2(rs.getString(10));
+				user.setRegip(rs.getString(11));
+				user.setRegDate(rs.getString(12));
+				user.setLeaveDate(rs.getString(13));
+				user.setPoint(rs.getInt(13));
+			}
+			closeAll();
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		return user;
+	};
+	
 	public List<MemberDTO> selectMembers() {
 List<MemberDTO> users = new ArrayList<MemberDTO>();
 		
@@ -156,6 +190,40 @@ List<MemberDTO> users = new ArrayList<MemberDTO>();
 		closeAll();
 		return users;
 	};
+	
+	public List<MemberDTO> selectMembersList(int start) {
+		List<MemberDTO> users = new ArrayList<MemberDTO>();
+		
+		try {
+			conn = getConnection();
+			psmt= conn.prepareStatement(SQL.SELECT_MEMBERS_LIST);
+			psmt.setInt(1, start);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				MemberDTO user = new MemberDTO();
+				user.setUid(rs.getString(1));
+				user.setPass(rs.getString(2));
+				user.setName(rs.getString(3));
+				user.setNick(rs.getString(4));
+				user.setEmail(rs.getString(5));
+				user.setHp(rs.getString(6));
+				user.setRole(rs.getString(7));
+				user.setZip(rs.getString(8));
+				user.setAddr1(rs.getString(9));
+				user.setAddr2(rs.getString(10));
+				user.setRegip(rs.getString(11));
+				user.setRegDate(rs.getString(12));
+				user.setLeaveDate(rs.getString(13));
+				users.add(user);
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		closeAll();
+		return users;
+	};
+	
 	public void updateMember(MemberDAO dto) {
 		
 	};

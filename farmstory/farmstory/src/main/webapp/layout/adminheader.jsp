@@ -18,7 +18,7 @@
         </a>
         <div class="home">
           <a href="/farmstory">HOME | </a>
-          <a href="#">로그아웃 | </a>
+          <a href="/farmstory/admin/logout.do">로그아웃 | </a>
           <a href="#">고객센터</a>
         </div>
       </header>

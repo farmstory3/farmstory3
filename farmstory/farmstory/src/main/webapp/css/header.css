@@ -5,6 +5,7 @@ input, textarea {outline: none;}
 * {
     margin: 0;
     padding: 0;
+    font-style: "malgun gothic";
 }
 
 
@@ -35,6 +36,7 @@ input, textarea {outline: none;}
     width: 190px;
     height: 64px;
     position: relative;
+    cursor: pointer;
 }
 
 .logo-link-box {
@@ -50,6 +52,7 @@ input, textarea {outline: none;}
     font-size: 12px;
     gap: 3px;
 }
+
 
 .logo-add-box {
     background-image: url(../images/head_txt_img.png);

@@ -45,7 +45,7 @@
         </div>
         <div>
             <div class="menu-gubun"></div>
-            <a href="/farmstory/market/list.html">
+            <a href="/farmstory/market/list.do">
                 <div class="menu-2 menu"><img src="/farmstory/images/head_menu_badge.png" alt="badge"></div>
             </a>
         </div>
@@ -68,9 +68,11 @@
             </a>
         </div>
     </div>
-    <div class="header-bottom-img">
-
-    </div>
+	<div class="header-bottom-img">
+		<div class="header-bottom-comm">
+			<img src="/farmstory/images/sub_top_tit1.png" alt="bottom-img">  <!-- 수정 -->
+		</div>
+	</div>
 </div>
 <div class="main-wrapper">
     <div class="sidebar-box">

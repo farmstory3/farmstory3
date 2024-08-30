@@ -76,7 +76,7 @@
             <div id="article3">
               <div class="table_heading" id="user_heading">
                 <a id="user_now">회원현황</a>
-                <a href="/farmstory/adminprod/adminMember.do" id="user_more">+ 더보기</a>
+                <a href="/farmstory/admin/member.do" id="user_more">+ 더보기</a>
               </div>
               <table id="user_table">
                 <tr>

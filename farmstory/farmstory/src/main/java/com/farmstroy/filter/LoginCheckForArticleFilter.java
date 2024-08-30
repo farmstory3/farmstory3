@@ -14,12 +14,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-//@WebFilter(urlPatterns = {"/list.do","/article/write.do","/article/view.do","/article/modify.do"})
+@WebFilter(urlPatterns = {"/article/write.do","/article/view.do","/article/modify.do",})
 public class LoginCheckForArticleFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2) throws IOException, ServletException {
-		
-		
 		
 		// 로그인 여부 확인
 		HttpServletRequest req = (HttpServletRequest) arg0;

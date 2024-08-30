@@ -40,7 +40,7 @@
             <ul id="user_manage">
               회원관리
               <li id="user_list" <%= "adminMember".equals(fileName) ? "class='active'" : "" %> >L 
-                <a href="/farmstory/adminprod/adminMember.do">회원목록</a>
+                <a href="/farmstory/admin/member.do">회원목록</a>
               </li>
             </ul>
           </div>

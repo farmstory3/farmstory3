@@ -9,13 +9,6 @@
 <link rel="stylesheet" href="/farmstory/css/header.css">
 <link rel="stylesheet" href="/farmstory/css/login.css">
 <link rel="stylesheet" href="/farmstory/css/footer.css">
-<style>
-    .login-links {
-        text-align: right;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-</style>
 <script>
 	const success= ${success};
 	
@@ -25,21 +18,31 @@
 		alert('정상적으로 로그아웃 되었습니다.');
 	} else if(success == 102){
 		alert('먼저 로그인을 하셔야 합니다.');
+	} else if(success == 103){
+		alert('관리자 계정이 아닙니다.');
 	}
 </script>
 <body>
     <div class="header-wrapper">
         <div class="header-logo-box">
-            <div class="header-logo">
+            <div class="header-logo" onclick="location.href='/farmstory'">
                 <div class="logo-link-box">
                     <div class="logo-link">
-                        <div>Home</div>
-                        <div>|</div>
-                        <div>로그인</div>
-                        <div>|</div>
-                        <div>회원가입</div>
-                        <div>|</div>
-                        <div>고객센터</div>
+                      	<div>
+							<a href="/farmstory">Home</a>
+						</div>
+						<div>|</div>
+						<div>
+							<a href="/farmstory/member/terms.do">회원가입</a>
+						</div>
+						<div>|</div>
+						<div>
+							<a href="/farmstory/admin/login.do">관리자</a>
+						</div>
+						<div>|</div>
+						<div>
+							<a href="/farmstory/article/list.do?group=community&cate=qna">고객센터</a>
+						</div>
                     </div>
                 </div>
 
@@ -53,30 +56,39 @@
             <div class="menu-5"></div>
         </div>
         <div class="header-menu-box">
-            <div>
-                <div class="menu-gubun"></div>
+        <div>
+            <div class="menu-gubun"></div>
+            <a href="/farmstory/introduction/hello.do">
                 <div class="menu-1 menu"></div>
-            </div>
-            <div>
-                <div class="menu-gubun"></div>
-                <div class="menu-2 menu"></div>
-            </div>
-            <div>
-                <div class="menu-gubun"></div>
-                <div class="menu-3 menu"></div>
-            </div>
-            <div>
-                <div class="menu-gubun"></div>
-                <div class="menu-4 menu"></div>
-            </div>
-            <div>
-                <div class="menu-gubun"></div>
-                <div class="menu-5 menu"></div>
-            </div>
+            </a>
         </div>
-
+        <div>
+            <div class="menu-gubun"></div>
+            <a href="/farmstory/market/list.do" id="menu2">
+                <div class="menu-2 menu"><img src="/farmstory/images/head_menu_badge.png" alt="badge"></div>
+            </a>
+        </div>
+        <div>
+            <div class="menu-gubun"></div>
+            <a href="/farmstory/article/list.do?group=croptalk&cate=story">
+                <div class="menu-3 menu"></div>
+            </a>
+        </div>
+        <div>
+            <div class="menu-gubun"></div>
+            <a href="/farmstory/article/list.do?group=event&cate=info">
+                <div class="menu-4 menu"></div>
+            </a>
+        </div>
+        <div>
+            <div class="menu-gubun"></div>
+            <a href="/farmstory/article/list.do?group=community&cate=notice">
+                <div class="menu-5 menu"></div>
+            </a>
         </div>
     </div>
+
+        </div>
     <div class="main-wrapper">
         <div class="main-box">
             <section class="login">
@@ -91,11 +103,7 @@
                             <td><input type="password" name="pass" placeholder="비밀번호 입력"></td>
                         </tr>
                     </table>
-                    <input type="submit" value="로그인" class="btnLogin">
-                    <div class="login-links">
-                        <a href="/farmstory/member/findId.do">아이디찾기 |</a>
-                        <a href="/farmstory/member/findPass.do">비밀번호찾기</a>
-                    </div>
+                    <input type="submit" value="로그인" class="btnLogin" style="cursor: pointer">
                 </form>	
                 <div>
                     <h3>회원 로그인 안내</h3>
@@ -106,7 +114,6 @@
                 </div>
             </section>
         </div>
-        
     </div>
    <jsp:include page="/layout/_footer.jsp" />	
 </body>

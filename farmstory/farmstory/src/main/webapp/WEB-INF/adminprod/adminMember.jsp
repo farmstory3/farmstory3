@@ -41,34 +41,41 @@
 							<th>가입일</th>
 							<th>확인</th>
 						</tr>
-						<c:forEach var="user" items="${users}">
+						<c:forEach var="member" items="${members}">
 							<tr>
-								<td><input type="checkbox" name="member"></td>
-								<td>${user.uid}</td>
-								<td>${user.name}</td>
-								<td>${user.nick}</td>
-								<td>${user.email}</td>
-								<td>${user.hp}</td>
+								<td><input type="checkbox" name="member" value="${member.uid}"></td>
+								<td>${member.uid}</td>
+								<td>${member.name}</td>
+								<td>${member.nick}</td>
+								<td>${member.email}</td>
+								<td>${member.hp}</td>
 								<td><select name="role">
-										<option value="등급">${user.role}</option>
+										<option value="등급">${member.role}</option>
 								</select></td>
-								<td>${user.regDate}</td>
-								<td><a href="#">[상세확인]</a></td>
+								<td>${member.regDate}</td>
+								<td><a href="/farmstory/admin/memberDetail.do?uid=${member.uid}">[상세확인]</a></td>
 							</tr>
 						</c:forEach>
 					</table>
 				</div>
-				<div id="list_num">
-					<c:if test="${pageGroup.start > 1}">
-						<a href="/jboard/article/list.do?pg=${pageGroup.start-1}" class="prev">이전</a>
-					</c:if>
-					<c:forEach var="i" begin="${pageGroup.start}" end="${pageGroup.end}">
-						<a href="/jboard/article/list.do?pg=${i}" class="num ${currentPage == i ? 'current':'off'}">${i}</a>
-					</c:forEach>
-					<c:if test="${pageGroup.end < lastPageNum}">
-						<a href="/jboard/article/list.do?pg=${pageGroup.end+1}"	class="next">다음</a>
-					</c:if>
-				</div>
+				<div class="list_num">
+                    <c:if test="${pageGroup.start > 1}">
+                    	<a href="/farmstory/admin/member.do?pg=${pageGroup.start - 1}" class="prev">이전</a>
+	                </c:if>
+	                <c:choose>
+		                <c:when test="${pageGroup.end > pageLastNum}">
+		                	<c:forEach var="i" begin="${pageGroup.start}" end="${pageLastNum}">
+		                    	<a href="/farmstory/admin/member.do?pg=${i}" class="num ${currentPageNum == i ? 'current':'off'}">${i}</a>                
+		                    </c:forEach>
+		                </c:when>
+		                <c:otherwise>
+			                 <c:forEach var="i" begin="${pageGroup.start}" end="${pageGroup.end}">
+		                    	<a href="/farmstory/admin/member.do?pg=${i}" class="num ${currentPageNum == i ? 'current':'off'}">${i}</a>                
+		                    </c:forEach>
+		                	 <a href="/farmstory/admin/member.do?pg=${pageGroup.end + 1}" class="next">다음</a>
+		                </c:otherwise>
+	               </c:choose>
+                </div>
 			</div>
 		</div>
 	</main>

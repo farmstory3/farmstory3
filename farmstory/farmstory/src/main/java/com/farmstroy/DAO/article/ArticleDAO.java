@@ -25,7 +25,7 @@ public class ArticleDAO extends DBHelper{
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	public int insertArticle(com.farmstroy.DTO.article.articleDTO dto) {
+	public int insertArticle(articleDTO dto) {
 		int no = 0;
 		try {
 			conn = getConnection();
@@ -61,7 +61,7 @@ public class ArticleDAO extends DBHelper{
 		return no;
 	}
 
-	public int selectCountTotal(com.farmstroy.DTO.article.groupDTO groupdto) {
+	public int selectCountTotal(groupDTO groupdto) {
 		int total = 0 ;
 		try {
 			conn = getConnection();
@@ -70,6 +70,24 @@ public class ArticleDAO extends DBHelper{
 			psmt.setString(2, groupdto.getCate());
 			rs = psmt.executeQuery();
 
+			if(rs.next()) {
+				total = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}finally {
+			closeAll();
+		}
+		return total;
+	}
+	
+	public int selectCountTotalMember() {
+		int total = 0 ;
+		try {
+			conn = getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("select count(*) from member");
+			
 			if(rs.next()) {
 				total = rs.getInt(1);
 			}

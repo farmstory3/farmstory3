@@ -52,7 +52,7 @@
 			</div>
 			<div>
 				<div class="menu-gubun"></div>
-				<a href="/farmstory//market/list.do">
+				<a href="/farmstory/market/list.do">
 					<div class="menu-2 menu">
 						<img src="../images/head_menu_badge.png" alt="badge">
 					</div>
@@ -77,9 +77,3 @@
 				</a>
 			</div>
 		</div>
-		<div class="header-bottom-img">
-			<div class="header-bottom-comm">
-				<img src="/farmstory/images/sub_top_tit_${group}.png" alt="bottom-img5">  <!-- 수정 -->
-			</div>
-		</div>
-	</div>
