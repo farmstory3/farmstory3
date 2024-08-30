@@ -1,0 +1,124 @@
+.main-wrapper{
+    margin: 20px auto;
+    width: 980px;
+    display: flex;
+}
+
+.sidebar-box {
+    /* width: 176px;
+    height: 650px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-logo{
+    background-image: url(../images/sub_aside_cate4_tit.png);
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    width: 130px;
+    height: 45px;
+}
+
+.sidebar-bg-box {
+    background-image: url(../images/sub_aside_bg_lnb.png);
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    width: 175px;
+    height: 233px;
+}
+
+.sidebar-item-1{
+    width: 175px;
+    height: 29px;
+}
+
+.sidebar-item-1{
+    margin-top: 30px;
+    background-image: url(../images/sub_cate4_lnb1_ov.png);
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+}
+
+
+
+.sidebar-gubun-box{
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    width: 2px;
+    height: 650px;
+    background-image: url(../images/sub_aside_bg_line.png);
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2% 5%;
+}
+
+.main-title-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-title {
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-image: url(../images/sub_nav_tit_cate4_tit1.png);
+    width: 66px;
+    height: 24px;
+}
+
+.main-nav-box {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-icon-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    height: 5px;
+    width: 5px;
+    background-image: url(../images/sub_page_nav_ico.gif);
+}
+
+.nav-latest-icon {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-tit-1, .nav-tit-2{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-tit-3 {
+    color: #91BA15;
+}
+
+.main-nav-box div {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-gubun-box {
+    width: 100%;
+    background-image: url(../images/main_cs_top_line.png);
+    height: 2px;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    margin-top: 5px;
+}
