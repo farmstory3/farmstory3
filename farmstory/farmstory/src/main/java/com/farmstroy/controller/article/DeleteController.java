@@ -31,7 +31,7 @@ public class DeleteController extends HttpServlet {
 		// 댓글 삭제
 		int result = service.deleteArticle(Integer.parseInt(no));
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/article/list.do?group=event&cate=info");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/article/list.do?group="+group+"&cate="+cate);
 		dispatcher.forward(req, resp);
 	}
 }
