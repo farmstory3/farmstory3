@@ -10,6 +10,7 @@ public class SQL {
 	public static final String WHERE_HP = "WHERE `hp`=?";
 	public static final String SELECT_UID  = "select uid from member where email = ?";
 	
+	public static final String SELELT_MEMBER_DETAIL = "select * from member where uid =?";
 	public static final String SELELT_MEMBER = "select * from member where uid =? and pass=SHA2(?,256)";
 	public static final String INSERT_MEMBER = "insert into member set "
 											+ "`uid` = ?, "
@@ -75,6 +76,7 @@ public class SQL {
 															+ "where fno = ?";
 	
 	public static final String SELECT_MEMBERS = "select * from member order by regDate limit 3";
+	public static final String SELECT_MEMBERS_LIST = "select * from member order by regDate desc limit ?, 10";
 	public static final String SELECT_PRODUCT = "select PF.`path`, PF.filename, P.* from "
 												+ "product as P JOIN product_file AS PF "
 												+ "ON P.prod_idx = PF.prod_idx "

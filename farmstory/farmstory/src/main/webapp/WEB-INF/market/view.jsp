@@ -57,6 +57,12 @@
 
 <body>
 	<jsp:include page="/layout/_header.jsp" />
+<div class="header-bottom-img">
+		<div class="header-bottom-comm">
+			<img src="/farmstory/images/sub_top_tit2.png" alt="bottom-img">  <!-- 수정 -->
+		</div>
+	</div>
+</div>
     <div class="main-wrapper">
         <div class="sidebar-box">
             <div class="sidebar-logo-box">

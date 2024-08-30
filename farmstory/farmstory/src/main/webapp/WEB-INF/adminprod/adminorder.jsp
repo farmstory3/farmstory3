@@ -7,6 +7,18 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+    	
+	    function selectAll(selectAllCheckbox) {
+	        // order_table 테이블에서 모든 체크박스를 가져옴
+	        const checkboxes = document.querySelectorAll('#order_table input[type="checkbox"][name="selectedProducts"]');
+	        
+	        checkboxes.forEach((checkbox) => {
+	            checkbox.checked = selectAllCheckbox.checked;
+	        });
+	    }
+    
+</script>
 <%
 		Integer resultObj = (Integer) request.getAttribute("r");
 		int result = (resultObj != null) ? resultObj : -1;
@@ -40,7 +52,7 @@
           <div id="section2_title">주문목록</div>
           <div id="article_wrapper">
             <div id="article1">
-              <table id="prod_table">
+              <table id="order_table">
                 <tr>
                   <th><input type="checkbox"></th>
                   <th>주문번호</th>

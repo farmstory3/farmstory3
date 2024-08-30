@@ -69,6 +69,10 @@ public enum articleService {
 		return dao.selectCountTotal(groupdto);
 	}
 	
+	public int selectCountTotalMember() {
+		return dao.selectCountTotalMember();
+	}
+	
 	public articleDTO selectArticle(String no) {
 		return dao.selectArticle(no);
 	}

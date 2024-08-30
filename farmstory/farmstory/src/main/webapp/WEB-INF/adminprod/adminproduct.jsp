@@ -8,6 +8,18 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/farmstory/css/adminproduct.css">
 </head>
+<script type="text/javascript">
+    	
+	    function selectAll(selectAllCheckbox) {
+	        // prod_table 테이블에서 모든 체크박스를 가져옴
+	        const checkboxes = document.querySelectorAll('#prod_table input[type="checkbox"][name="selectedProducts"]');
+	        
+	        checkboxes.forEach((checkbox) => {
+	            checkbox.checked = selectAllCheckbox.checked;
+	        });
+	    }
+    
+</script>
 <%
 		Integer resultObj = (Integer) request.getAttribute("r");
 		int result = (resultObj != null) ? resultObj : -1;

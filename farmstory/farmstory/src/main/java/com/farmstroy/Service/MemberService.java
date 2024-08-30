@@ -77,8 +77,14 @@ public enum MemberService{
 	public MemberDTO selectMember(String uid, String pass) {
 		return dao.selectMember(uid, pass);
 	};
+	public MemberDTO selectMemberDetail(String uid) {
+		return dao.selectMemberDetail(uid);
+	};
 	public List<MemberDTO> selectMembers() {
 		return dao.selectMembers();
+	};
+	public List<MemberDTO> selectMembersList(int start) {
+		return dao.selectMembersList(start);
 	};
 	public void updateUser(MemberDAO dto) {
 		
