@@ -1,0 +1,46 @@
+package com.farmstroy.DAO.cart;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.farmstroy.DAO.member.MemberDAO;
+import com.farmstroy.DTO.cart.CartDTO;
+import com.farmstroy.util.DBHelper;
+import com.farmstroy.util.SQL;
+
+public class CartDAO extends DBHelper{
+	private static CartDAO instance = new CartDAO();
+	public static CartDAO getInstance() {
+		return instance;
+	}
+	private CartDAO() {};
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	public int selectCart(String uid) {
+		int cart_idx = 0;
+		try {
+			conn = getConnection();
+			psmt = conn.prepareStatement(SQL.SELECT_CART_BY_UID);
+			psmt.setString(1, uid);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				cart_idx = rs.getInt("cart_idx");
+			}
+		} catch (Exception e) {
+			// 
+		}
+		return cart_idx;
+	}
+	public CartDTO insertCart(CartDTO cart) {
+		CartDTO dto = new CartDTO();
+		try {
+			conn = getConnection();
+			psmt = conn.prepareStatement(SQL.INSERT_INTO_CART);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return null;
+	}
+}

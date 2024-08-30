@@ -1,0 +1,8 @@
+package com.farmstroy.controller.market;
+
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet("/market/deletecart.do")
+public class CartDeleteController {
+
+}

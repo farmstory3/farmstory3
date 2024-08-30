@@ -1,0 +1,27 @@
+package com.farmstroy.controller.market;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/market/deletecart.do")
+public class CartDeleteController extends HttpServlet{
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String[] selectedCartIds = request.getParameterValues("check");
+	    
+	    if (selectedCartIds != null) {
+	        // String 배열을 Integer 리스트로 변환
+	        List<Integer> cartIdsList = Arrays.stream(selectedCartIds)
+	                                          .map(Integer::parseInt)
+	                                          .collect(Collectors.toList());
+
+	        // 선택된 cart_idx들을 이용해 삭제 작업을 수행
+	        cartService.deleteItems(cartIdsList);
+	    }
+	}
+}

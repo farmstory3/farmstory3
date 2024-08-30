@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+    <fullyQualifiedTypeName name="com.farmstroy.DTO.member.MemberDTO"/>
+    <fullyQualifiedTypeName name="java.security.MessageDigest"/>
+    <fullyQualifiedTypeName name="com.farmstroy.util.HashUtil"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="com.farmstroy.DAO.cart.CartDAO"/>
+    <fullyQualifiedTypeName name="com.farmstroy.util.DBHelper"/>
+    <fullyQualifiedTypeName name="com.farmstroy.util.SQL"/>
+    <fullyQualifiedTypeName name="com.farmstroy.Service.ProductService"/>
+    <fullyQualifiedTypeName name="com.farmstroy.DTO.product.ProductDTO"/>
+    <fullyQualifiedTypeName name="com.farmstroy.DTO.cart.CartDTO"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="com.farmstroy.Service.CartService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+</qualifiedTypeNameHistroy>

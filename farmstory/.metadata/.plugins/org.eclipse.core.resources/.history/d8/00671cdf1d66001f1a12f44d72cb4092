@@ -1,0 +1,21 @@
+package com.farmstroy.Service;
+
+import com.farmstroy.DAO.cart.CartDAO;
+import com.farmstroy.DTO.cart.CartDTO;
+
+public enum CartService {
+	INSTANCE;
+	
+	private CartDAO dao = CartDAO.getInstance();
+
+	public int selectCart(String uid) {
+		
+		return dao.selectCart(uid);
+	}
+
+	public CartDTO insertCart(CartDTO cart) {
+		
+		return dao.insertCart(cart);
+	}
+	
+}

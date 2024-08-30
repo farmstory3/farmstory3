@@ -1,0 +1,13 @@
+package com.farmstroy.Service;
+
+import com.farmstroy.DAO.member.MemberDAO;
+
+public enum CartService {
+	INSTANCE;
+	
+	private MemberDAO dao = MemberDAO.getInstance();
+	
+	public String select_uid(String email) {
+	      return dao.select_uid(email);
+	}
+}
